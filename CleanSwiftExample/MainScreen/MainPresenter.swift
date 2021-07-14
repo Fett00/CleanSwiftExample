@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+
+protocol MainPresenterProtocol: AnyObject {
+    
+}
+
+class MainPresenter: MainPresenterProtocol {
+    
+    var view:MainViewProtocol!
+    
+}

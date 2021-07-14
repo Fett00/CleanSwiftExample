@@ -19,3 +19,13 @@ enum Colors{
     static let buttonColor1 = UIColor(named: "buttonColors1") 
     static let buttonColor2 = UIColor(named: "buttonColors2")
 }
+
+enum SFSymbols{
+    
+    static let score = UIImage(systemName: "list.star")
+    static let game = UIImage(systemName: "gamecontroller")
+    //static let bluetoothPlayer = UIImage(systemName: "wifi")
+}
+
+
+

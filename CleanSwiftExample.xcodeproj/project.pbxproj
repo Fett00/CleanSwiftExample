@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A1B7FBB269F5A630012C7F7 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B7FB9269F5A620012C7F7 /* CoreData.xcdatamodeld */; };
+		5A1B7FBE269F5B1F0012C7F7 /* CoreDataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B7FBD269F5B1F0012C7F7 /* CoreDataWorker.swift */; };
+		5A1B7FC1269F5E800012C7F7 /* Scores+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B7FBF269F5E800012C7F7 /* Scores+CoreDataClass.swift */; };
+		5A1B7FC2269F5E800012C7F7 /* Scores+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B7FC0269F5E800012C7F7 /* Scores+CoreDataProperties.swift */; };
 		5A1BA414269B6DE400A09BBF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1BA413269B6DE400A09BBF /* MainView.swift */; };
 		5A1BA416269B6E3900A09BBF /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1BA415269B6E3900A09BBF /* MainPresenter.swift */; };
 		5A1BA418269B6E6E00A09BBF /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1BA417269B6E6E00A09BBF /* MainInteractor.swift */; };
@@ -17,6 +21,17 @@
 		5A1BA423269B730200A09BBF /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1BA422269B730200A09BBF /* Enums.swift */; };
 		5A1BA425269B749500A09BBF /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1BA424269B749500A09BBF /* UIViewExt.swift */; };
 		5A62996B269CA86000963D98 /* CustonStartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62996A269CA86000963D98 /* CustonStartButton.swift */; };
+		5A62996E269DB6BE00963D98 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62996D269DB6BE00963D98 /* TabBarRouter.swift */; };
+		5A629971269DB8CC00963D98 /* NavigationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A629970269DB8CC00963D98 /* NavigationControllerRouter.swift */; };
+		5A629975269DBA3600963D98 /* ProjectAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A629974269DBA3600963D98 /* ProjectAssembler.swift */; };
+		5A629977269DBD6600963D98 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A629976269DBD6600963D98 /* ScoreView.swift */; };
+		5A629979269DBF9000963D98 /* MainAssambler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A629978269DBF9000963D98 /* MainAssambler.swift */; };
+		5A62997B269DC00F00963D98 /* ScoreAssambler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62997A269DC00F00963D98 /* ScoreAssambler.swift */; };
+		5A62997D269DC04B00963D98 /* ScorePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62997C269DC04B00963D98 /* ScorePresenter.swift */; };
+		5A62997F269DC05500963D98 /* ScoreInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62997E269DC05500963D98 /* ScoreInteractor.swift */; };
+		5A629981269DC06000963D98 /* ScoreRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A629980269DC06000963D98 /* ScoreRouter.swift */; };
+		5A629983269DDA4100963D98 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A629982269DDA4100963D98 /* MainModel.swift */; };
+		5A629985269DDA6300963D98 /* ScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A629984269DDA6300963D98 /* ScoreModel.swift */; };
 		5A8BB77E268E17E70072ED0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8BB77D268E17E70072ED0B /* AppDelegate.swift */; };
 		5A8BB780268E17E70072ED0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8BB77F268E17E70072ED0B /* SceneDelegate.swift */; };
 		5A8BB782268E17E70072ED0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8BB781268E17E70072ED0B /* ViewController.swift */; };
@@ -25,6 +40,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A1B7FBA269F5A630012C7F7 /* ScoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScoreData.xcdatamodel; sourceTree = "<group>"; };
+		5A1B7FBD269F5B1F0012C7F7 /* CoreDataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataWorker.swift; sourceTree = "<group>"; };
+		5A1B7FBF269F5E800012C7F7 /* Scores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scores+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5A1B7FC0269F5E800012C7F7 /* Scores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scores+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5A1BA413269B6DE400A09BBF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		5A1BA415269B6E3900A09BBF /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		5A1BA417269B6E6E00A09BBF /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
@@ -35,6 +54,17 @@
 		5A1BA422269B730200A09BBF /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		5A1BA424269B749500A09BBF /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		5A62996A269CA86000963D98 /* CustonStartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustonStartButton.swift; sourceTree = "<group>"; };
+		5A62996D269DB6BE00963D98 /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
+		5A629970269DB8CC00963D98 /* NavigationControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerRouter.swift; sourceTree = "<group>"; };
+		5A629974269DBA3600963D98 /* ProjectAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAssembler.swift; sourceTree = "<group>"; };
+		5A629976269DBD6600963D98 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		5A629978269DBF9000963D98 /* MainAssambler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssambler.swift; sourceTree = "<group>"; };
+		5A62997A269DC00F00963D98 /* ScoreAssambler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreAssambler.swift; sourceTree = "<group>"; };
+		5A62997C269DC04B00963D98 /* ScorePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorePresenter.swift; sourceTree = "<group>"; };
+		5A62997E269DC05500963D98 /* ScoreInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreInteractor.swift; sourceTree = "<group>"; };
+		5A629980269DC06000963D98 /* ScoreRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreRouter.swift; sourceTree = "<group>"; };
+		5A629982269DDA4100963D98 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		5A629984269DDA6300963D98 /* ScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreModel.swift; sourceTree = "<group>"; };
 		5A8BB77A268E17E70072ED0B /* CleanSwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanSwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A8BB77D268E17E70072ED0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A8BB77F268E17E70072ED0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,13 +85,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A1B7FBC269F5A7C0012C7F7 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				5A1B7FC3269F5E860012C7F7 /* CoreData */,
+				5A1B7FBD269F5B1F0012C7F7 /* CoreDataWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		5A1B7FC3269F5E860012C7F7 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5A1B7FC4269F5E960012C7F7 /* Scores */,
+				5A1B7FB9269F5A620012C7F7 /* CoreData.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		5A1B7FC4269F5E960012C7F7 /* Scores */ = {
+			isa = PBXGroup;
+			children = (
+				5A1B7FBF269F5E800012C7F7 /* Scores+CoreDataClass.swift */,
+				5A1B7FC0269F5E800012C7F7 /* Scores+CoreDataProperties.swift */,
+			);
+			path = Scores;
+			sourceTree = "<group>";
+		};
 		5A1BA411269B6D4A00A09BBF /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
 				5A1BA413269B6DE400A09BBF /* MainView.swift */,
-				5A1BA415269B6E3900A09BBF /* MainPresenter.swift */,
 				5A1BA417269B6E6E00A09BBF /* MainInteractor.swift */,
+				5A1BA415269B6E3900A09BBF /* MainPresenter.swift */,
 				5A1BA41F269B6EAE00A09BBF /* MainRouter.swift */,
+				5A629978269DBF9000963D98 /* MainAssambler.swift */,
+				5A629982269DDA4100963D98 /* MainModel.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -79,6 +138,12 @@
 		5A1BA421269B72B100A09BBF /* ScoreScreen */ = {
 			isa = PBXGroup;
 			children = (
+				5A629976269DBD6600963D98 /* ScoreView.swift */,
+				5A62997E269DC05500963D98 /* ScoreInteractor.swift */,
+				5A62997C269DC04B00963D98 /* ScorePresenter.swift */,
+				5A629980269DC06000963D98 /* ScoreRouter.swift */,
+				5A62997A269DC00F00963D98 /* ScoreAssambler.swift */,
+				5A629984269DDA6300963D98 /* ScoreModel.swift */,
 			);
 			path = ScoreScreen;
 			sourceTree = "<group>";
@@ -90,6 +155,22 @@
 				5A62996A269CA86000963D98 /* CustonStartButton.swift */,
 			);
 			path = "Custom Views and Extension";
+			sourceTree = "<group>";
+		};
+		5A62996C269DB68A00963D98 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				5A62996D269DB6BE00963D98 /* TabBarRouter.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		5A62996F269DB8AE00963D98 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				5A629970269DB8CC00963D98 /* NavigationControllerRouter.swift */,
+			);
+			path = NavigationController;
 			sourceTree = "<group>";
 		};
 		5A8BB771268E17E70072ED0B = {
@@ -114,6 +195,10 @@
 				5A8BB77D268E17E70072ED0B /* AppDelegate.swift */,
 				5A8BB77F268E17E70072ED0B /* SceneDelegate.swift */,
 				5A1BA422269B730200A09BBF /* Enums.swift */,
+				5A629974269DBA3600963D98 /* ProjectAssembler.swift */,
+				5A1B7FBC269F5A7C0012C7F7 /* Workers */,
+				5A62996C269DB68A00963D98 /* TabBar */,
+				5A62996F269DB8AE00963D98 /* NavigationController */,
 				5A629969269CA7F600963D98 /* Custom Views and Extension */,
 				5A1BA411269B6D4A00A09BBF /* MainScreen */,
 				5A1BA421269B72B100A09BBF /* ScoreScreen */,
@@ -195,19 +280,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A629985269DDA6300963D98 /* ScoreModel.swift in Sources */,
 				5A62996B269CA86000963D98 /* CustonStartButton.swift in Sources */,
+				5A62997F269DC05500963D98 /* ScoreInteractor.swift in Sources */,
 				5A1BA425269B749500A09BBF /* UIViewExt.swift in Sources */,
+				5A1B7FC1269F5E800012C7F7 /* Scores+CoreDataClass.swift in Sources */,
 				5A8BB782268E17E70072ED0B /* ViewController.swift in Sources */,
+				5A629977269DBD6600963D98 /* ScoreView.swift in Sources */,
 				5A1BA41C269B6E8A00A09BBF /* GameFieldPresenter.swift in Sources */,
 				5A8BB77E268E17E70072ED0B /* AppDelegate.swift in Sources */,
+				5A1B7FBE269F5B1F0012C7F7 /* CoreDataWorker.swift in Sources */,
+				5A1B7FBB269F5A630012C7F7 /* CoreData.xcdatamodeld in Sources */,
 				5A8BB780268E17E70072ED0B /* SceneDelegate.swift in Sources */,
+				5A1B7FC2269F5E800012C7F7 /* Scores+CoreDataProperties.swift in Sources */,
+				5A62997D269DC04B00963D98 /* ScorePresenter.swift in Sources */,
+				5A629975269DBA3600963D98 /* ProjectAssembler.swift in Sources */,
 				5A1BA41E269B6E9500A09BBF /* GameFieldInteractor.swift in Sources */,
 				5A1BA420269B6EAE00A09BBF /* MainRouter.swift in Sources */,
 				5A1BA41A269B6E8000A09BBF /* GameFieldView.swift in Sources */,
+				5A629983269DDA4100963D98 /* MainModel.swift in Sources */,
 				5A1BA414269B6DE400A09BBF /* MainView.swift in Sources */,
 				5A1BA416269B6E3900A09BBF /* MainPresenter.swift in Sources */,
 				5A1BA418269B6E6E00A09BBF /* MainInteractor.swift in Sources */,
+				5A629971269DB8CC00963D98 /* NavigationControllerRouter.swift in Sources */,
+				5A629981269DC06000963D98 /* ScoreRouter.swift in Sources */,
+				5A629979269DBF9000963D98 /* MainAssambler.swift in Sources */,
 				5A1BA423269B730200A09BBF /* Enums.swift in Sources */,
+				5A62997B269DC00F00963D98 /* ScoreAssambler.swift in Sources */,
+				5A62996E269DB6BE00963D98 /* TabBarRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +501,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5A1B7FB9269F5A620012C7F7 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5A1B7FBA269F5A630012C7F7 /* ScoreData.xcdatamodel */,
+			);
+			currentVersion = 5A1B7FBA269F5A630012C7F7 /* ScoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5A8BB772268E17E70072ED0B /* Project object */;
 }

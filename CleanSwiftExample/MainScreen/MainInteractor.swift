@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+
+protocol MainInteractorProtocol: AnyObject {
+    
+}
+
+class MainInterctor: MainInteractorProtocol{
+    
+    var presenter:MainPresenterProtocol!
+    
+}

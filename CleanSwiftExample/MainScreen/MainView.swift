@@ -7,12 +7,14 @@
 
 import UIKit
 
-protocol MainViewProtocol {
+protocol MainViewProtocol: AnyObject {
     
     
 }
 
 class MainView: UIViewController, MainViewProtocol {
+    
+    var interactor: MainInteractorProtocol!
     
     //Картинки над выбором соперника
     let enemyLabelsBlock = UIStackView()
@@ -42,6 +44,8 @@ class MainView: UIViewController, MainViewProtocol {
         //Настройка кнопки наала игры
         configurateButton()
     }
+    
+    //MARK: - Настройка блока с выбором соперника
     
     func configurateEnemyPickerBlock(){
         
@@ -104,6 +108,8 @@ class MainView: UIViewController, MainViewProtocol {
         ])
     }
     
+    //MARK: - Настройка блока с выбором сложности ПК
+    
     func configurateSettingsBlock(){
         
         view.addSubview([
@@ -143,6 +149,8 @@ class MainView: UIViewController, MainViewProtocol {
         ])
     }
     
+    //MARK: - Настройка кнопки старта
+    
     func configurateButton(){
         
         view.addSubview([
@@ -170,7 +178,8 @@ class MainView: UIViewController, MainViewProtocol {
         ])
     }
     
-    //Рекция на смену соперника
+    //MARK: - Рекация на смену соперника
+    
     @objc func enemyPickerDidChanged(){
         
         switch enemyPicker.selectedSegmentIndex {
@@ -186,11 +195,15 @@ class MainView: UIViewController, MainViewProtocol {
         }
     }
     
+    //MARK: - Отключение выбора сложности компьютера при выборе другого режима
+    
     func difficultHiddenState(state:Bool){
         
         computerDifficultLable.isEnabled = state
         computerDifficultPicker.isEnabled = state
     }
+    
+    //MARK: - Таргет для кнопки
     
     @objc func tapOnStartButton(){
         
