@@ -9,22 +9,52 @@ import Foundation
 
 enum MainModel{
     
-    enum StartGame{
+    enum Difficult{
+        
+        case easy
+        case hard
+    }
+    
+    enum Enemy{
+        
+        case Player2
+        case AI
+        case Bluetooth
+    }
+    
+    struct Settings {
+        
+        var difficult: Difficult
+        var enemy: Enemy
+    }
+    
+    enum SaveSettings{
         
         struct Request {
             
-        }
-        
-        struct Response {
+            var difficult: Difficult?
+            var enemy: Enemy?
             
         }
         
-        struct ViewModel {
-            
-        }
+        struct Response {}
+        
+        struct ViewModel {}
     }
     
-    struct PassingData{
+    enum GetSettings{
         
+        struct Request {}
+        
+        struct Response {}
+        
+        struct ViewModel {}
     }
+    
+    struct PassingDataToGameField{
+        
+        let difficult:Difficult
+        let enemy:Enemy
+    }
+    
 }

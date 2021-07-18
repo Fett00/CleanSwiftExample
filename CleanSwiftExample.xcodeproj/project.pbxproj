@@ -155,13 +155,13 @@
 			path = ScoreScreen;
 			sourceTree = "<group>";
 		};
-		5A629969269CA7F600963D98 /* Custom Views and Extension */ = {
+		5A629969269CA7F600963D98 /* CustomViewsAndExtension */ = {
 			isa = PBXGroup;
 			children = (
-				5A1BA424269B749500A09BBF /* UIViewExt.swift */,
-				5A62996A269CA86000963D98 /* CustonStartButton.swift */,
+				5A96290E26A4D32100198732 /* CustomView */,
+				5A96290F26A4D33300198732 /* Extension */,
 			);
-			path = "Custom Views and Extension";
+			path = CustomViewsAndExtension;
 			sourceTree = "<group>";
 		};
 		5A62996C269DB68A00963D98 /* TabBar */ = {
@@ -206,7 +206,7 @@
 				5A1B7FBC269F5A7C0012C7F7 /* Workers */,
 				5A62996C269DB68A00963D98 /* TabBar */,
 				5A62996F269DB8AE00963D98 /* NavigationController */,
-				5A629969269CA7F600963D98 /* Custom Views and Extension */,
+				5A629969269CA7F600963D98 /* CustomViewsAndExtension */,
 				5A1BA411269B6D4A00A09BBF /* MainScreen */,
 				5A1BA421269B72B100A09BBF /* ScoreScreen */,
 				5A1BA412269B6D5200A09BBF /* GameFieldScreen */,
@@ -215,6 +215,22 @@
 				5A8BB78B268E17EA0072ED0B /* Info.plist */,
 			);
 			path = CleanSwiftExample;
+			sourceTree = "<group>";
+		};
+		5A96290E26A4D32100198732 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				5A62996A269CA86000963D98 /* CustonStartButton.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		5A96290F26A4D33300198732 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5A1BA424269B749500A09BBF /* UIViewExt.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

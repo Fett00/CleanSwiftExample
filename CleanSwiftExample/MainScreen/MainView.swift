@@ -44,6 +44,9 @@ class MainView: UIViewController, MainViewProtocol {
         configurateSettingsBlock()
         //Настройка кнопки наала игры
         configurateButton()
+        
+        //Сохранение первоначальных настроек игры
+        interactor.saveSettings(setting: MainModel.SaveSettings.Request(difficult: .easy, enemy: .Player2))
     }
     
     //MARK: - Настройка блока с выбором соперника
@@ -128,6 +131,8 @@ class MainView: UIViewController, MainViewProtocol {
         computerDifficultPicker.insertSegment(withTitle: "😈", at: 1, animated: true)
         computerDifficultPicker.selectedSegmentIndex = 0
         
+        computerDifficultPicker.addTarget(self, action: #selector(computerDifficultDidChanged), for: .valueChanged)
+        
         computerDifficultPicker.isEnabled = false
         //
         
@@ -186,11 +191,29 @@ class MainView: UIViewController, MainViewProtocol {
         switch enemyPicker.selectedSegmentIndex {
         
         case 0:
+            interactor.saveSettings(setting: MainModel.SaveSettings.Request(difficult: nil, enemy: .Player2))
             difficultHiddenState(state: false)
         case 1:
+            interactor.saveSettings(setting: MainModel.SaveSettings.Request(difficult: nil, enemy: .AI))
             difficultHiddenState(state: true)
         case 2:
-            print("2")
+            interactor.saveSettings(setting: MainModel.SaveSettings.Request(difficult: nil, enemy: .Bluetooth))
+            difficultHiddenState(state: false)
+        default:
+            break
+        }
+    }
+    
+    //MARK: - Рекация на смену сложности AI
+    
+    @objc func computerDifficultDidChanged(){
+        
+        switch computerDifficultPicker.selectedSegmentIndex {
+        
+        case 0:
+            interactor.saveSettings(setting: MainModel.SaveSettings.Request(difficult: .easy, enemy: nil))
+        case 1:
+            interactor.saveSettings(setting: MainModel.SaveSettings.Request(difficult: .hard, enemy: nil))
         default:
             break
         }
@@ -210,6 +233,6 @@ class MainView: UIViewController, MainViewProtocol {
         
         print("Button did touched")
         
-        router.navigateToGameField()
+        router.pushToGaneFieldWithData(data: interactor.getSettings())
     }
 }

@@ -20,8 +20,19 @@ class GameFieldView: UIViewController,GameFieldViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .cyan
+        view.backgroundColor = .systemBackground
+        
+        //Настройка игрвой сцены
+        configurateGameScene()
     }
+    
+    //MARK: - Настройка игровой сцены
+    
+    func configurateGameScene(){
+        
+    }
+    
+    //MARK: -
     
     deinit {
         print("\(self) was deinited!")

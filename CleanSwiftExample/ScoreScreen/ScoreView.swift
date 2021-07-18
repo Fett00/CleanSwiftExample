@@ -10,6 +10,7 @@ import UIKit
 protocol ScoreViewProtocol: AnyObject {
     
     func showScore(viewModel: ScoreModel.ShowScore.ViewModel)
+    
 }
 
 //Сборка экрана со счетом

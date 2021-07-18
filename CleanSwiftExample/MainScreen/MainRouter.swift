@@ -9,24 +9,17 @@ import UIKit
 
 protocol MainRouterProtocol {
     
-    func navigateToGameField()
-    func navigateToViewWithGameData(view:UIViewController, data:MainModel.PassingData)
+    func pushToGaneFieldWithData(data:MainModel.Settings)
 }
 
 class MainRouter: MainRouterProtocol{
     
     weak var view:MainView!
     
-    func navigateToGameField() {
-        
+    func pushToGaneFieldWithData(data: MainModel.Settings) { // ДОБАВИТЬ ПЕРЕДАЧУ ДАННЫХ
         let gameField = GameFieldAssambler.assemble()
         
         view.navigationController?.pushViewController(gameField, animated: true)
-        
-    }
-    
-    func navigateToViewWithGameData(view: UIViewController, data: MainModel.PassingData) {
-        
     }
     
 
