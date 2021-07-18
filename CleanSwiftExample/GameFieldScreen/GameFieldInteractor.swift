@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+protocol GameFieldInteractorProtocol {
+    
+}
+
+class GameFieldInteractor:GameFieldInteractorProtocol{
+    
+    var presenter: GameFieldPresenterProtocol!
+    
+}

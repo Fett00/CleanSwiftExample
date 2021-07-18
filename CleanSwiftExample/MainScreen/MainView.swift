@@ -15,6 +15,7 @@ protocol MainViewProtocol: AnyObject {
 class MainView: UIViewController, MainViewProtocol {
     
     var interactor: MainInteractorProtocol!
+    var router: MainRouterProtocol!
     
     //Картинки над выбором соперника
     let enemyLabelsBlock = UIStackView()
@@ -208,5 +209,7 @@ class MainView: UIViewController, MainViewProtocol {
     @objc func tapOnStartButton(){
         
         print("Button did touched")
+        
+        router.navigateToGameField()
     }
 }

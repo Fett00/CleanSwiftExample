@@ -9,16 +9,22 @@ import Foundation
 
 enum MainModel{
     
-    
-    struct Request {
+    enum StartGame{
         
+        struct Request {
+            
+        }
+        
+        struct Response {
+            
+        }
+        
+        struct ViewModel {
+            
+        }
     }
     
-    struct Response {
-        
-    }
-    
-    struct ViewModel {
+    struct PassingData{
         
     }
 }

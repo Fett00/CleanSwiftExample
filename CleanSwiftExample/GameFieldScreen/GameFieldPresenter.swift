@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+
+protocol GameFieldPresenterProtocol {
+    
+}
+
+class GameFieldPresenter: GameFieldPresenterProtocol {
+    
+    weak var view: GameFieldViewProtocol!
+    
+}

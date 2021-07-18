@@ -30,6 +30,7 @@ class ScoreInterctor: ScoreInteractorProtocol{
         }
     }
     
+    //Показать все счета
     func showScores(){
         
         let scores = coreDataHelper.get(withCondition: nil, withLimit: nil)
@@ -37,6 +38,7 @@ class ScoreInterctor: ScoreInteractorProtocol{
         presenter.prepearToShowScore(response: ScoreModel.ShowScore.Response(scores: scores))
     }
     
+    //Удалть счет
     func deleteScore(){
         
     }

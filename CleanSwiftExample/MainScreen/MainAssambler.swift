@@ -21,8 +21,11 @@ class MainAssambler: MainAssamblerProtocol{
         let view = MainView()
         let presenter = MainPresenter()
         let interactor = MainInterctor()
+        let router = MainRouter()
         
         view.interactor = interactor
+        view.router = router
+        router.view = view
         interactor.presenter = presenter
         presenter.view = view
         
