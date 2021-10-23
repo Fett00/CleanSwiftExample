@@ -11,7 +11,7 @@ import CoreData
 class CoreDataWorker<Entity: NSManagedObject>{
     
     //Создание контекста для работы с CoreData
-    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     //Сохранение Данных в БД
     private func save(){
@@ -29,9 +29,27 @@ class CoreDataWorker<Entity: NSManagedObject>{
     }
     
     //Удаление записи из CoreData
-    func delete(){
+    func delete(withCondition condition:(String,String)?){
         
-        //context.delete()
+        var predicate:NSPredicate?
+        
+        if let condition = condition{
+            predicate = NSPredicate(format: "\(condition.0)=%@", condition.1)
+        }
+        
+        let request = Entity.fetchRequest()
+        request.predicate = predicate
+        
+        do {
+            
+            let toDelete = try context.fetch(request) as! [Entity]
+            context.delete(toDelete.first!)
+        }
+        catch {
+            
+            print(error.localizedDescription)
+        }
+        
         save()
     }
     
@@ -44,12 +62,15 @@ class CoreDataWorker<Entity: NSManagedObject>{
     //TODO: Добавить запрос к БД с условиями(для поиска)
     //Получение записей из CoreData
     
-    func get(withCondition condition:String?,withLimit limit:Int?) -> [Entity] {
+    //condition: First String - argument, second - condition.
+    //Exm: ("name","Ivan") -> "rows where name = Ivan"
+    
+    func get(withCondition condition:(String,String)?,withLimit limit:Int?) -> [Entity] {
 
         var predicate:NSPredicate?
         
         if let condition = condition{
-            predicate = NSPredicate(format: condition)
+            predicate = NSPredicate(format: "\(condition.0)%@", condition.1)
         }
 
         do {
@@ -58,8 +79,8 @@ class CoreDataWorker<Entity: NSManagedObject>{
             request.predicate = predicate
             request.fetchLimit = limit ?? 0
             
-            let tempData:[Entity] = try context.fetch(request) as! [Entity]
-            return tempData
+            let result:[Entity] = try context.fetch(request) as! [Entity]
+            return result
         }
         catch {
             return []

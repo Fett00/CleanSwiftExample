@@ -9,21 +9,21 @@ import Foundation
 
 protocol ScorePresenterProtocol: AnyObject {
     
-    func prepearToShowScore(response: ScoreModel.ShowScore.Response)
+    func prepearToShowScores(response: ScoreModel.ShowScore.Response)
 }
 
 class ScorePresenter: ScorePresenterProtocol {
     
     weak var view:ScoreViewProtocol!
     
-    func prepearToShowScore(response: ScoreModel.ShowScore.Response) {
+    func prepearToShowScores(response: ScoreModel.ShowScore.Response) {
         
         let scores = response.scores.map{ "\($0.leftScore) : \($0.rightScore)" }
         let times:[String] = response.scores.map{
             
             let date = Date(timeIntervalSince1970: $0.timeStamp)
             let formater = DateFormatter()
-            formater.dateFormat = "MMM d h:mm"
+            formater.dateFormat = "YYY MMM d H:mm"
             return formater.string(from: date)
         }
         

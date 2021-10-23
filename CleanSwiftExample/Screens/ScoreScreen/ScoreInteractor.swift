@@ -10,6 +10,7 @@ import Foundation
 protocol ScoreInteractorProtocol: AnyObject {
     
     func fetchScores(request:ScoreModel.ShowScore.Request)
+    func deleteScore(request: ScoreModel.DeleteScore.Request)
 }
 
 class ScoreInterctor: ScoreInteractorProtocol{
@@ -18,29 +19,22 @@ class ScoreInterctor: ScoreInteractorProtocol{
     
     let coreDataHelper = CoreDataWorker<Scores>()
     
-    func fetchScores(request: ScoreModel.ShowScore.Request) {
-    
-        switch request.state{
-            
-        case .show:
-            showScores()
-            
-        case .delete:
-            deleteScore()
-        }
-    }
+    var scores = [Scores]()
     
     //Показать все счета
-    func showScores(){
+    func fetchScores(request: ScoreModel.ShowScore.Request) {
         
-        let scores = coreDataHelper.get(withCondition: nil, withLimit: nil)
         
-        presenter.prepearToShowScore(response: ScoreModel.ShowScore.Response(scores: scores))
+        scores = coreDataHelper.get(withCondition: nil, withLimit: nil)
+        
+        presenter.prepearToShowScores(response: ScoreModel.ShowScore.Response(scores: scores))
     }
     
     //Удалть счет
-    func deleteScore(){
+    func deleteScore(request: ScoreModel.DeleteScore.Request){
         
+        coreDataHelper.delete(withCondition: ("timeStamp", String(scores[request.indexPath].timeStamp)))
     }
-    
 }
+
+

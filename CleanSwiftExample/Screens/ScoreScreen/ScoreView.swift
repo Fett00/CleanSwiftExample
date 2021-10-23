@@ -14,14 +14,14 @@ protocol ScoreViewProtocol: AnyObject {
 }
 
 //Сборка экрана со счетом
-class ScoreView: UIViewController, ScoreViewProtocol, UITableViewDataSource {
+class ScoreView: UIViewController, ScoreViewProtocol, UITableViewDataSource, UITableViewDelegate {
     
     var interactor: ScoreInteractorProtocol!
     
     var scores = [(String,String)]()
     
     let scoreTableView = UITableView()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,12 +44,13 @@ class ScoreView: UIViewController, ScoreViewProtocol, UITableViewDataSource {
         view.addSubview(scoreTableView)
         
         scoreTableView.dataSource = self
+        scoreTableView.delegate = self
         scoreTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
         scoreTableView.tableFooterView = UIView()
         
         NSLayoutConstraint.activate([
-        
+            
             scoreTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             scoreTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             scoreTableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
@@ -62,7 +63,7 @@ class ScoreView: UIViewController, ScoreViewProtocol, UITableViewDataSource {
     //MARK: - Запрос интерактору на получение счетов(?)
     
     func fetchScores(){
-        let request = ScoreModel.ShowScore.Request(state: .show)
+        let request = ScoreModel.ShowScore.Request()
         interactor.fetchScores(request: request)
     }
     
@@ -77,7 +78,7 @@ class ScoreView: UIViewController, ScoreViewProtocol, UITableViewDataSource {
     func showScore(viewModel: ScoreModel.ShowScore.ViewModel) {
         
         scores = viewModel.scoresAndTime
-        scoreTableView.reloadData()
+        scoreTableView.reloadSections(IndexSet(integer: 0), with: .automatic)
     }
     
     //MARK: - UITableViewDataSource
@@ -100,15 +101,22 @@ class ScoreView: UIViewController, ScoreViewProtocol, UITableViewDataSource {
         return cell
     }
     
-    //MARK: - UITableViewSwipeAction
+    //MARK: - UITableViewSwipeAction //Удаление записи
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let swipeAction = UIContextualAction(style: .destructive, title: "Delete"){ (swipeAction,view,completationHandler) in
+        let swipeAction = UIContextualAction(style: .destructive, title: "Delete"){ [unowned self] (swipeAction,view,completationHandler) in
             
-            
+            interactor.deleteScore(request: .init(indexPath: indexPath.row))
+            interactor.fetchScores(request: .init())
         }
         
         return UISwipeActionsConfiguration(actions: [swipeAction])
+    }
+    
+    //MARK: - UITableViewDeselectRow
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

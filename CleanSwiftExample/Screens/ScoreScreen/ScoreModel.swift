@@ -11,10 +11,7 @@ enum ScoreModel{
     
     enum ShowScore{
         
-        struct Request {
-            
-            let state:RequestState
-        }
+        struct Request {}
         
         struct Response {
             
@@ -25,11 +22,23 @@ enum ScoreModel{
             
             var scoresAndTime:[(String,String)]
         }
+    }
+    
+    enum DeleteScore{
         
-        enum RequestState{
+        struct Request {
             
-            case show
-            case delete
+            let indexPath: Int
+        }
+        
+        struct Response {
+            
+            
+        }
+        
+        struct ViewModel {
+            
+            
         }
     }
 }

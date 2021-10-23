@@ -18,6 +18,7 @@ enum Colors{
     
     static let buttonColor1 = UIColor(named: "buttonColors1") 
     static let buttonColor2 = UIColor(named: "buttonColors2")
+    static let gameSceneColor = UIColor(named: "gameSceneColor")
 }
 
 enum SFSymbols{

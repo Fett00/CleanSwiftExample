@@ -207,9 +207,7 @@
 				5A62996C269DB68A00963D98 /* TabBar */,
 				5A62996F269DB8AE00963D98 /* NavigationController */,
 				5A629969269CA7F600963D98 /* CustomViewsAndExtension */,
-				5A1BA411269B6D4A00A09BBF /* MainScreen */,
-				5A1BA421269B72B100A09BBF /* ScoreScreen */,
-				5A1BA412269B6D5200A09BBF /* GameFieldScreen */,
+				5A96291026A4E4E800198732 /* Screens */,
 				5A8BB786268E17EA0072ED0B /* Assets.xcassets */,
 				5A8BB788268E17EA0072ED0B /* LaunchScreen.storyboard */,
 				5A8BB78B268E17EA0072ED0B /* Info.plist */,
@@ -231,6 +229,16 @@
 				5A1BA424269B749500A09BBF /* UIViewExt.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		5A96291026A4E4E800198732 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5A1BA411269B6D4A00A09BBF /* MainScreen */,
+				5A1BA412269B6D5200A09BBF /* GameFieldScreen */,
+				5A1BA421269B72B100A09BBF /* ScoreScreen */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
